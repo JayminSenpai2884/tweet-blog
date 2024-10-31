@@ -2,7 +2,7 @@
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const TWITTER_BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAJvUwgEAAAAACwUQarh%2FzGtYvmqzbM%2FYeHZzQAQ%3DEFY8cYS8o0hK0WM0yJwGboowrUlbTArBNXMon0QmEGXHpTLz7s";
+const TWITTER_BEARER_TOKEN = process.env.TWITTER_BEARER_TOKEN;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {

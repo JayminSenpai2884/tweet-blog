@@ -7,8 +7,8 @@ const TWITTER_BEARER_TOKEN = process.env.TWITTER_BEARER_TOKEN;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      // Use the Twitter API endpoint to get tweet details
-      const response = await axios.get('https://api.twitter.com/2/tweets', {
+      const tweetId = '1851940024394088448'; // Replace with the actual tweet ID
+      const response = await axios.get(`https://api.twitter.com/2/tweets/${tweetId}`, {
         headers: {
           Authorization: `Bearer ${TWITTER_BEARER_TOKEN}`,
         },
